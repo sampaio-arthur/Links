@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sampaio Arthur</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LinktreeApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            const background = document.querySelector('.background');
+            const moveX = (e.clientX / window.innerWidth) * 40 - 10; // Amplificação do movimento
+            const moveY = (e.clientY / window.innerHeight) * 10 - 5; // Amplificação do movimento
+            background.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
