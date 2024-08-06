@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Services",
+    "\\Controllers",
+    "\\Models",
     "\\Views",
-    "\\Views\\Home",
     "\\Views\\Links",
     "\\Views\\Shared",
     "\\wwwroot",
@@ -11,5 +11,6 @@
     "\\wwwroot\\Images",
     "\\wwwroot\\js"
   ],
+  "SelectedNode": "\\Views\\Links\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
